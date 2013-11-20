@@ -37,6 +37,7 @@
         </style>
 
         <script type="text/javascript">
+           
            function initialize() {
                var mapOptions = {
                    center: new google.maps.LatLng(-34.397, 150.644),
@@ -47,7 +48,17 @@
            }
            google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-
+    <script type="text/javascript"> 
+        function disp_confirm() {
+            var r = jConfirm("Your Shift End ! Do you still want to Continue ? ")
+            if (r == true) {
+                Alert("You pressed OK!")
+            }
+            else {
+                Alert("You pressed Cancel!")
+            }
+        }
+            </script>
 	</head>
 
     <body>
