@@ -8,8 +8,18 @@
 
     <script type="text/javascript">
         function WelcomeUser(username) {
-            alert("Welcome::" + username);
+            console.log(httpGet(username));
+            alert(httpGet(username));
         }
+        function httpGet(theUrl) {
+            var xmlHttp = null;
+
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theUrl, true);
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+        }
+
     </script>
 </head>
 <body>

@@ -11,7 +11,7 @@ namespace PetSociety.asp.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ClientScript.RegisterStartupScript(GetType(),"hwa", "WelcomeUser('VJ');", true);
+            ClientScript.RegisterStartupScript(GetType(), "hwa", "WelcomeUser('http://petsociety.azurewebsites.net/api/Login?token=token&INemail=super@mail.com&INpassword=password');", true);
         }
     }
 }
