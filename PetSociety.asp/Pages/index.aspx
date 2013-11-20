@@ -5,11 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 		<!-- Title here -->
-		<title>Cosos</title>
-		<!-- Description, Keywords and Author -->
-		<meta name="description" content="Your description"/>
-		<meta name="keywords" content="Your,Keywords"/>
-		<meta name="author" content="ResponsiveWebInc"/>
+		<title>PetSociety</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css"/>
@@ -27,6 +23,25 @@
 		
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="#"/>
+     <style>
+      #map_canvas {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+        function initialize() {
+            var map_canvas = document.getElementById('map_canvas');
+            var map_options = {
+                center: new google.maps.LatLng(44.5403, -78.5463),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(map_canvas, map_options)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 	</head>
 <body>
 
@@ -46,6 +61,7 @@
             </div>
          </div>
       </div>
+    <!--
       <div class="subscription">
 		<div class="container">
 			<div class="row">
@@ -63,7 +79,7 @@
 							  <span class="input-group-btn">
 								<button class="btn btn-primary" type="button">Subscribe</button>
 							  </span>
-							</div><!-- /input-group -->
+							</div>
 						</form>
 					</div>
 				</div>
@@ -75,11 +91,12 @@
 			</div>
 		</div>
 	  </div>  
+    -->
         <div class="map">
-			<iframe height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/?ie=UTF8&amp;ll=16.200457,77.355809&amp;spn=0.022378,0.042272&amp;t=m&amp;z=15&amp;output=embed"></iframe>
+			<iframe height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/?ie=UTF8&amp;ll=16.200457,77.355809&amp;spn=900.022378,100.042272&amp;t=m&amp;z=15&amp;output=embed"></iframe>
 						
 		</div>
-
+        <div id="map_canvas"></div>
   <script src="../Scripts/jquery.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/respond.min.js"></script>
