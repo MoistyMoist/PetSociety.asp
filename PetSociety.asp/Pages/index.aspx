@@ -23,27 +23,34 @@
 		
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="#"/>
-     <style>
-      #map_canvas {
-        width: 100%;
-        height: 500px;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script>
-        function initialize() {
-            var map_canvas = document.getElementById('map_canvas');
-            var map_options = {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(map_canvas, map_options)
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+
+
+        <!--Google api -->
+        <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn7PCDcQ6el2OzBjdIKHgFF2xfxdwNj3o&sensor=false">
+        </script>
+         <style>
+          #map-canvas {
+            width: 100%;
+            height: 500px;
+          }
+        </style>
+
+        <script type="text/javascript">
+           function initialize() {
+               var mapOptions = {
+                   center: new google.maps.LatLng(-34.397, 150.644),
+                   zoom: 8
+               };
+               var map = new google.maps.Map(document.getElementById("map-canvas"),
+                   mapOptions);
+           }
+           google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
 	</head>
-<body>
+
+    <body>
 
         <div class="main">
          <div class="container">
@@ -92,16 +99,18 @@
 		</div>
 	  </div>  
     -->
-        <div class="map">
+        <!--<div class="map">
 			<iframe height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/?ie=UTF8&amp;ll=16.200457,77.355809&amp;spn=900.022378,100.042272&amp;t=m&amp;z=15&amp;output=embed"></iframe>
 						
-		</div>
-        <div id="map_canvas"></div>
-  <script src="../Scripts/jquery.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/respond.min.js"></script>
-    <script src="../Scripts/html5shiv.js"></script>
-    <script src="../Scripts/jquery.countdown.min.js"></script>
-    <script src="../Scripts/custom.js"></script>
-</body>
+		</div>-->
+        <div id="map-canvas"></div>
+
+
+        <script src="../Scripts/jquery.js"></script>
+        <script src="../Scripts/bootstrap.min.js"></script>
+        <script src="../Scripts/respond.min.js"></script>
+        <script src="../Scripts/html5shiv.js"></script>
+        <script src="../Scripts/jquery.countdown.min.js"></script>
+        <script src="../Scripts/custom.js"></script>
+    </body>
 </html>
