@@ -57,8 +57,116 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\bootstrap-theme.css" />
+    <Content Include="CSS\bootstrap-theme.min.css" />
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\carousel.css" />
+    <Content Include="CSS\site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\carousel1.jpg" />
+    <Content Include="images\carousel2.jpg" />
+    <Content Include="images\carousel3.jpg" />
+    <Content Include="images\glyphicons-halflings-white.png" />
+    <Content Include="images\glyphicons-halflings.png" />
+    <Content Include="images\Icon1.png" />
+    <Content Include="images\Icon2.png" />
+    <Content Include="images\Icon3.png" />
     <Content Include="Pages\index.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\BtJs\affix.js" />
+    <Content Include="Scripts\BtJs\alert.js" />
+    <Content Include="Scripts\BtJs\application.js" />
+    <Content Include="Scripts\BtJs\button.js" />
+    <Content Include="Scripts\BtJs\carousel.js" />
+    <Content Include="Scripts\BtJs\collapse.js" />
+    <Content Include="Scripts\BtJs\customizer.js" />
+    <Content Include="Scripts\BtJs\dropdown.js" />
+    <Content Include="Scripts\BtJs\filesaver.js" />
+    <Content Include="Scripts\BtJs\holder.js" />
+    <Content Include="Scripts\BtJs\html5shiv.js" />
+    <Content Include="Scripts\BtJs\jquery.js" />
+    <Content Include="Scripts\BtJs\jszip.js" />
+    <Content Include="Scripts\BtJs\less.js" />
+    <Content Include="Scripts\BtJs\modal.js" />
+    <Content Include="Scripts\BtJs\popover.js" />
+    <Content Include="Scripts\BtJs\raw-files.js" />
+    <Content Include="Scripts\BtJs\respond.min.js" />
+    <Content Include="Scripts\BtJs\scrollspy.js" />
+    <Content Include="Scripts\BtJs\tab.js" />
+    <Content Include="Scripts\BtJs\tooltip.js" />
+    <Content Include="Scripts\BtJs\transition.js" />
+    <Content Include="Scripts\BtJs\uglify.js" />
+    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="simpliq\css\bootstrap-responsive.min.css" />
+    <Content Include="simpliq\css\bootstrap.min.css" />
+    <Content Include="simpliq\css\chosen.css" />
+    <Content Include="simpliq\css\elfinder.min.css" />
+    <Content Include="simpliq\css\elfinder.theme.css" />
+    <Content Include="simpliq\css\font-awesome-ie7.min.css" />
+    <Content Include="simpliq\css\font-awesome.min.css" />
+    <Content Include="simpliq\css\fullcalendar.css" />
+    <Content Include="simpliq\css\glyphicons.css" />
+    <Content Include="simpliq\css\halflings.css" />
+    <Content Include="simpliq\css\jquery-ui-1.10.3.custom.css" />
+    <Content Include="simpliq\css\jquery.cleditor.css" />
+    <Content Include="simpliq\css\jquery.gritter.css" />
+    <Content Include="simpliq\css\jquery.iphone.toggle.css" />
+    <Content Include="simpliq\css\jquery.noty.css" />
+    <Content Include="simpliq\css\noty_theme_default.css" />
+    <Content Include="simpliq\css\retina.css" />
+    <Content Include="simpliq\css\style-responsive.min.css" />
+    <Content Include="simpliq\css\style.min.css" />
+    <Content Include="simpliq\css\uniform.default.css" />
+    <Content Include="simpliq\css\uploadify.css" />
+    <Content Include="simpliq\js\analytics.js" />
+    <Content Include="simpliq\js\bootstrap.min.js" />
+    <Content Include="simpliq\js\charts.min.js" />
+    <Content Include="simpliq\js\core.min.js" />
+    <Content Include="simpliq\js\counter.min.js" />
+    <Content Include="simpliq\js\custom.min.js" />
+    <Content Include="simpliq\js\excanvas.js" />
+    <Content Include="simpliq\js\fullcalendar.min.js" />
+    <Content Include="simpliq\js\jquery-1.10.2.min.js" />
+    <Content Include="simpliq\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="simpliq\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="simpliq\js\jquery.autosize.min.js" />
+    <Content Include="simpliq\js\jquery.chosen.min.js" />
+    <Content Include="simpliq\js\jquery.cleditor.min.js" />
+    <Content Include="simpliq\js\jquery.cookie.js" />
+    <Content Include="simpliq\js\jquery.dataTables.min.js" />
+    <Content Include="simpliq\js\jquery.elfinder.min.js" />
+    <Content Include="simpliq\js\jquery.flot.js" />
+    <Content Include="simpliq\js\jquery.flot.pie.js" />
+    <Content Include="simpliq\js\jquery.flot.resize.min.js" />
+    <Content Include="simpliq\js\jquery.flot.stack.js" />
+    <Content Include="simpliq\js\jquery.flot.time.js" />
+    <Content Include="simpliq\js\jquery.gritter.min.js" />
+    <Content Include="simpliq\js\jquery.imagesloaded.js" />
+    <Content Include="simpliq\js\jquery.iphone.toggle.js" />
+    <Content Include="simpliq\js\jquery.knob.modified.js" />
+    <Content Include="simpliq\js\jquery.masonry.min.js" />
+    <Content Include="simpliq\js\jquery.noty.js" />
+    <Content Include="simpliq\js\jquery.placeholder.min.js" />
+    <Content Include="simpliq\js\jquery.raty.min.js" />
+    <Content Include="simpliq\js\jquery.sparkline.min.js" />
+    <Content Include="simpliq\js\jquery.ui.touch-punch.js" />
+    <Content Include="simpliq\js\jquery.uniform.min.js" />
+    <Content Include="simpliq\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="simpliq\js\justgage.1.0.1.min.js" />
+    <Content Include="simpliq\js\modernizr.js" />
+    <Content Include="simpliq\js\raphael.2.1.0.min.js" />
+    <Content Include="simpliq\js\retina.js" />
+    <Content Include="simpliq\js\wizard.min.js" />
     <Content Include="Web.config" />
+    <Content Include="simpliq\css\css" />
+    <Content Include="simpliq\fonts\9k-RPmcnxYEPm8CNFsH2gg.woff" />
+    <Content Include="simpliq\fonts\fontawesome-webfont.woff" />
+    <Content Include="simpliq\fonts\KT3KS9Aol4WfR6Vas8kNcg.woff" />
+    <Content Include="simpliq\fonts\qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\index.aspx.cs">
@@ -71,6 +179,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="Scripts\jquery-2.0.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -78,9 +191,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CSS\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
