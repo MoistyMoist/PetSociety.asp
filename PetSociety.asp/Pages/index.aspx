@@ -25,35 +25,31 @@
     </script>
     <script type="text/javascript">
         var map;
-     function initialize() {
+        var x = 1.37;
+        var y = 103.84;
+        function initialize() {
+     
             var mapOptions = {
                 center: new google.maps.LatLng(1.37, 103.84),
                 zoom: 12
             };
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(-25.363882, 131.044922),
-                map: map,
-                title: "Hello World!"
-            });
             map = new google.maps.Map(document.getElementById("map-canvas"),
                 mapOptions);
-           
-            //marker.setMap(map);
-            
      }
     
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- plotting the map -->
     <script type="text/javascript">
-       // google.maps.event.addDomListener(window, 'load', initialize);
-        function plot_Glocations(x,y) {
+        function plot_Glocations(INx, INy) {
+            x = INx;
+            y = INy;
             var mapOptions = {
                 center: new google.maps.LatLng(-25.363882, 131.044922),
                 zoom: 10
             };
             var image = {
-                url: '../images/icon2.png',
+                url: "../images/icon2.png",
                 // This marker is 20 pixels wide by 32 pixels tall.
                 size: new google.maps.Size(20, 32)
                 // The origin for this image is 0,0.
@@ -63,11 +59,11 @@
             };
             var marker = new google.maps.Marker({
                 // position: new google.maps.LatLng(-25.363882, 131.044922),
-                position: new google.maps.LatLng(x, y),
+                position: new google.maps.LatLng(x,y),
                 animation: google.maps.Animation.DROP,
                 map: map,
-                title: "Hello World!",
-                icon: image
+                title: "Hello World!"//,
+                //icon:image
             });
             marker.setMap(map);
         }
@@ -96,20 +92,7 @@
     </script>
 
 
-    <script type="text/javascript">
-        function btnAccept_onclick() {
-
-            PageMethods.startPlotting(onSuccess, onFailure);
-        }
-        function onSuccess(result) {
-            alert(result);
-        }
-
-
-        function onFailure(error) {
-            alert(error);
-        }
-</script>
+   
     
 
 

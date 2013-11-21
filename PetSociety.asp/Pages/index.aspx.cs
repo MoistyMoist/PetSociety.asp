@@ -48,8 +48,10 @@ namespace PetSociety.asp.Pages
             }
             for (int i = 0; i < locations.Count; i++)
             {
-                // ClientScript.RegisterStartupScript(GetType(), "hwafd", "plot_locations("+locations.ElementAt(i).X+");", true);
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + 1.37 + "," + 103.84 + ");", true);
+                var x = locations.ElementAt(i).X;
+                var y=locations.ElementAt(i).Y;
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+ ");", true);
+               // ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(1.37,103);", true);
             }
         }
         
