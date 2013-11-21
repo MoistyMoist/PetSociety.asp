@@ -56,7 +56,6 @@
                 scaledSize: new google.maps.Size(25, 25)
             };
             var marker = new google.maps.Marker({
-                // position: new google.maps.LatLng(-25.363882, 131.044922),
                 position: new google.maps.LatLng(x,y),
                 animation: google.maps.Animation.DROP,
                 map: map,
@@ -66,10 +65,7 @@
             marker.setMap(map);
         }
 
-
         function plot_locations(x,y) {
-            
-          //  setTimeout(function () { plot_locations(); }, 10000);
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
@@ -86,7 +82,26 @@
             }
         }
 
+        function plot_strays(x, y) {
+            var body = document.getElementsByTagName('BODY')[0];
+            // CONDITION DOES NOT WORK
+            if (document.readyState === "complete") {
+                alert("plotting");
+                plot_Gstray(x, y);
+            } else {
+                alert("waitting");
+                // CODE BELOW WORKS
+                if (window.addEventListener) {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                } else {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                }
+            }
+        }
         
+        function plot_Gstrays(INx, INy) {
+
+        }
     </script>
 
 
