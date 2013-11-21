@@ -7,6 +7,10 @@
     <title></title>
 
     <script type="text/javascript">
+        function plotmap() {
+           
+            alert("plotting map");
+        }
         function WelcomeUser(username) {
             console.log(httpGet(username));
             alert(httpGet(username));
