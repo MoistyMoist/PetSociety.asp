@@ -49,21 +49,19 @@
                 zoom: 10
             };
             var image = {
-                url: "../images/icon2.png",
-                // This marker is 20 pixels wide by 32 pixels tall.
-                size: new google.maps.Size(20, 32)
-                // The origin for this image is 0,0.
-                
-                // The anchor for this image is the base of the flagpole at 0,32.
-                
+                url: "../images/icon1.png",
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
             };
             var marker = new google.maps.Marker({
                 // position: new google.maps.LatLng(-25.363882, 131.044922),
                 position: new google.maps.LatLng(x,y),
                 animation: google.maps.Animation.DROP,
                 map: map,
-                title: "Hello World!"//,
-                //icon:image
+                title: "Hello World!",
+                icon: image
             });
             marker.setMap(map);
         }
