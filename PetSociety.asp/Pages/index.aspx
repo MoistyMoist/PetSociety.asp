@@ -27,8 +27,8 @@
         var map;
      function initialize() {
             var mapOptions = {
-                center: new google.maps.LatLng(-25.363882, 131.044922),
-                zoom: 8
+                center: new google.maps.LatLng(1.37, 103.84),
+                zoom: 12
             };
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(-25.363882, 131.044922),
@@ -47,16 +47,27 @@
     <!-- plotting the map -->
     <script type="text/javascript">
        // google.maps.event.addDomListener(window, 'load', initialize);
-        function plot_locations(x,y) {
+        function plot_Glocations(x,y) {
             var mapOptions = {
                 center: new google.maps.LatLng(-25.363882, 131.044922),
-                zoom: 8
+                zoom: 10
+            };
+            var image = {
+                url: '../images/icon2.png',
+                // This marker is 20 pixels wide by 32 pixels tall.
+                size: new google.maps.Size(20, 32)
+                // The origin for this image is 0,0.
+                
+                // The anchor for this image is the base of the flagpole at 0,32.
+                
             };
             var marker = new google.maps.Marker({
                 // position: new google.maps.LatLng(-25.363882, 131.044922),
-                position: new google.maps.LatLng(x,y),
+                position: new google.maps.LatLng(x, y),
+                animation: google.maps.Animation.DROP,
                 map: map,
-                title: "Hello World!"
+                title: "Hello World!",
+                icon: image
             });
             marker.setMap(map);
         }
@@ -69,14 +80,14 @@
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_locations(x,y);
+                plot_Glocations(x,y);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_locations(x,y); }, 10000);
+                    setTimeout(function () { plot_Glocations(x,y); }, 7000);
                 } else {
-                    setTimeout(function () { plot_locations(x,y); }, 10000);
+                    setTimeout(function () { plot_Glocations(x,y); }, 7000);
                 }
             }
         }
@@ -139,7 +150,7 @@
             <br />
         </div>
     </div>
-    <div id="map-canvas" style="width: 100%; height: 500px;"></div>
+    <div id="map-canvas" style="width: 100%; height: 600px;"></div>
 
 
     <script src="../Scripts/jquery.js"></script>

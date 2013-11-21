@@ -26,11 +26,11 @@ namespace PetSociety.asp.Pages
 
         void startPlotting(object source, EventArgs e)
         {
-            
+
             GetLocations();
-            GetEvents();
-            GetStrays();
-            GetLost();
+            //GetEvents();
+            //GetStrays();
+            //GetLost();
             
         }
 
@@ -49,7 +49,7 @@ namespace PetSociety.asp.Pages
             for (int i = 0; i < locations.Count; i++)
             {
                 // ClientScript.RegisterStartupScript(GetType(), "hwafd", "plot_locations("+locations.ElementAt(i).X+");", true);
-                ClientScript.RegisterStartupScript(GetType(), "hwad"+i, "plot_events(" + -25.363882 + "," + 132.044922 + ");", true);
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + 1.37 + "," + 103.84 + ");", true);
             }
         }
         
