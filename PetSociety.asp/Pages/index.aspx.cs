@@ -56,7 +56,8 @@ namespace PetSociety.asp.Pages
             {
                 var x = locations.ElementAt(i).X;
                 var y=locations.ElementAt(i).Y;
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+ ");", true);
+                var imageURl = locations.ElementAt(i).PIN.IMAGE.ImageURL;
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+ ","+imageURl +");", true);
                 LocationNO.Text = locations.Count.ToString();
             }
         }

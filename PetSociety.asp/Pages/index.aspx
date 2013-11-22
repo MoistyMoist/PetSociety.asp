@@ -28,20 +28,18 @@
         var x = 1.37;
         var y = 103.84;
         function initialize() {
-     
             var mapOptions = {
                 center: new google.maps.LatLng(1.37, 103.84),
                 zoom: 12
             };
             map = new google.maps.Map(document.getElementById("map-canvas"),
                 mapOptions);
-     }
-    
-        google.maps.event.addDomListener(window, 'load', initialize);
+        }
+      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- plotting the map -->
     <script type="text/javascript">
-        function plot_Glocations(INx, INy) {
+        function plot_Glocations(INx, INy,imageURL) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -49,7 +47,7 @@
                 zoom: 10
             };
             var image = {
-                url: "../images/icon1.png",
+                url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -59,30 +57,29 @@
                 position: new google.maps.LatLng(x,y),
                 animation: google.maps.Animation.DROP,
                 map: map,
-                title: "Hello World!",
                 icon: image
             });
             marker.setMap(map);
         }
 
-        function plot_locations(x,y) {
+        function plot_locations(x,y,imageURL) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Glocations(x,y);
+                plot_Glocations(x, y, imageURL);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Glocations(x,y); }, 7000);
+                    setTimeout(function () { plot_Glocations(x, y, imageURL); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Glocations(x,y); }, 7000);
+                    setTimeout(function () { plot_Glocations(x, y, imageURL); }, 7000);
                 }
             }
         }
 
-        function plot_strays(x, y) {
+        function plot_strays(x, y,imageURL) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
@@ -99,34 +96,109 @@
             }
         }
         
-        function plot_Gstrays(INx, INy) {
-
+        function plot_Gstrays(INx, INy,imageURL) {
+            x = INx;
+            y = INy;
+            var mapOptions = {
+                center: new google.maps.LatLng(-25.363882, 131.044922),
+                zoom: 10
+            };
+            var image = {
+                url: imageURL,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(x, y),
+                animation: google.maps.Animation.DROP,
+                map: map,
+                icon: image
+            });
+            marker.setMap(map);
         }
 
-        function plot_events(x, y) {
-
+        function plot_events(x, y,imageURL) {
+            var body = document.getElementsByTagName('BODY')[0];
+            // CONDITION DOES NOT WORK
+            if (document.readyState === "complete") {
+                alert("plotting");
+                plot_Gstray(x, y);
+            } else {
+                alert("waitting");
+                // CODE BELOW WORKS
+                if (window.addEventListener) {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                } else {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                }
+            }
         }
 
-        function plot_Gevent(x, y) {
-
+        function plot_Gevent(x, y,imageURL) {
+            x = INx;
+            y = INy;
+            var mapOptions = {
+                center: new google.maps.LatLng(-25.363882, 131.044922),
+                zoom: 10
+            };
+            var image = {
+                url: imageURL,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(x, y),
+                animation: google.maps.Animation.DROP,
+                map: map,
+                icon: image
+            });
+            marker.setMap(map);
         }
 
-        function plot_losts(x, y) {
-
+        function plot_losts(x, y,imageURL) {
+            var body = document.getElementsByTagName('BODY')[0];
+            // CONDITION DOES NOT WORK
+            if (document.readyState === "complete") {
+                alert("plotting");
+                plot_Gstray(x, y);
+            } else {
+                alert("waitting");
+                // CODE BELOW WORKS
+                if (window.addEventListener) {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                } else {
+                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                }
+            }
         }
 
-        function plot_Glosts(x, y) {
-
+        function plot_Glosts(x, y,imageURL) {
+            x = INx;
+            y = INy;
+            var mapOptions = {
+                center: new google.maps.LatLng(-25.363882, 131.044922),
+                zoom: 10
+            };
+            var image = {
+                url: imageURL,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(25, 25)
+            };
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(x, y),
+                animation: google.maps.Animation.DROP,
+                map: map,
+                icon: image
+            });
+            marker.setMap(map);
         }
-
     </script>
-
-
-   
-    
-
-
-
 </head>
 
 <body>
@@ -158,7 +230,9 @@
 
     <div class="subscription">
         <div class="container">
-            <button  onclick="plot_events()" />
+            <button  onclick="plot_events()" >
+                <asp:Image runat="server" src="../images/icon2.png" />
+            </button>
             add the navigation button here<br />
             <br />
         </div>
@@ -166,6 +240,7 @@
     <div id="map-canvas" style="width: 100%; height: 600px;"></div>
 
 
+    <!-- other Scripts-->
     <script src="../Scripts/jquery.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/respond.min.js"></script>
