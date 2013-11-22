@@ -102,6 +102,23 @@
         function plot_Gstrays(INx, INy) {
 
         }
+
+        function plot_events(x, y) {
+
+        }
+
+        function plot_Gevent(x, y) {
+
+        }
+
+        function plot_losts(x, y) {
+
+        }
+
+        function plot_Glosts(x, y) {
+
+        }
+
     </script>
 
 
@@ -126,10 +143,10 @@
                         <h1>PetSociety</h1>
                         <p>Society of lost pets</p>
                         <div class="countdown">
-                            <div id="countdown" class="hasCountdown"><span class="countdown_row countdown_show4"><span class="countdown_section"><span class="countdown_amount">24</span><br>
-                                Pets</span><span class="countdown_section"><span class="countdown_amount">23</span><br>
-                                    Events</span><span class="countdown_section"><span class="countdown_amount">54</span><br>
-                                        Users</span><span class="countdown_section"><span class="countdown_amount">2350</span><br>
+                            <div id="countdown" class="hasCountdown"><span class="countdown_row countdown_show4"><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="PetNO"></asp:Label></span><br>
+                                Pets</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="EventNO"></asp:Label></span><br>
+                                    Events</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="UserNO"></asp:Label></span><br>
+                                        Users</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="LocationNO"></asp:Label></span><br>
                                             Locations</span></span></div>
                         </div>
                         <div class="clearfix"></div>

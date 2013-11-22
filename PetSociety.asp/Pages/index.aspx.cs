@@ -12,12 +12,7 @@ namespace PetSociety.asp.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // ClientScript.RegisterStartupScript(GetType(), "hwa", "WelcomeUser('http://petsociety.azurewebsites.net/api/Login?token=token&INemail=super@mail.com&INpassword=password');", true);
-            
-           
-                //ClientScript.RegisterStartupScript(GetType(), "hwafd", "plot_locations();", true);
-
-           
+   
         }
         protected void Page_LoadComplete(object sender, EventArgs e)
         {
@@ -26,16 +21,27 @@ namespace PetSociety.asp.Pages
 
         void startPlotting(object source, EventArgs e)
         {
-
             GetLocations();
-            //GetEvents();
-            //GetStrays();
-            //GetLost();
+            GetEvents();
+            GetStrays();
+            GetLost();
+        }
+
+        protected void GetEvents()
+        {
+            
+        }
+        
+        protected void GetStrays()
+        {
             
         }
 
-        
-        
+        protected void GetLost()
+        {
+            
+        }
+
         protected void GetLocations()
         {
             List<LOCATION> locations;
@@ -51,7 +57,7 @@ namespace PetSociety.asp.Pages
                 var x = locations.ElementAt(i).X;
                 var y=locations.ElementAt(i).Y;
                 ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+ ");", true);
-               // ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(1.37,103);", true);
+                LocationNO.Text = locations.Count.ToString();
             }
         }
         
