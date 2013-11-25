@@ -47,7 +47,7 @@
                 zoom: 10
             };
             var image = {
-                url: imageURL,
+                url: window.location.protocol + "http:"+"//"+".iconverticons.com"+"//"+"img"+"//"+"logo.png",
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -62,19 +62,19 @@
             marker.setMap(map);
         }
 
-        function plot_locations(x,y,imageURL) {
+        function plot_locations(x,y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Glocations(x, y, imageURL);
+                plot_Glocations(x, y);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Glocations(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Glocations(x, y); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Glocations(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Glocations(x, y); }, 7000);
                 }
             }
         }

@@ -47,7 +47,7 @@ namespace PetSociety.asp.Pages
             List<LOCATION> locations;
             using(PetSocietyDBEntities db = new PetSocietyDBEntities())
             {
-                var query=from c in db.LOCATIONs
+                var query=from c in db.LOCATIONs.Include("PIN.IMAGE")
                               select c;
 
                  locations = query.ToList(); 
@@ -56,8 +56,8 @@ namespace PetSociety.asp.Pages
             {
                 var x = locations.ElementAt(i).X;
                 var y=locations.ElementAt(i).Y;
-                var imageURl = locations.ElementAt(i).PIN.IMAGE.ImageURL;
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+ ","+imageURl +");", true);
+                var imageURl = "dsa";
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+");", true);
                 LocationNO.Text = locations.Count.ToString();
             }
         }
