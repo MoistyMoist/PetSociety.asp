@@ -19,5 +19,10 @@ namespace PetSociety.asp.Pages
         {
             
         }
+
+        void ChangeType()
+        {
+            
+        }
     }
 }

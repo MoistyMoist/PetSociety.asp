@@ -56,7 +56,7 @@
 
         <div class="col-md-2 panel panel-success" style="height: auto; min-height: 600px; max-height: 800px; border-color: white; padding: 0px 0 0 0px;">
             <div class="panel-heading">
-                Analysis tools options
+                Tools
             </div>
             <div class="panel-body" style="padding: 0 0 0 0;">
 

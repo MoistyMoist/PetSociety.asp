@@ -11,30 +11,48 @@ namespace PetSociety.asp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class STRAY
     {
         public STRAY()
         {
             this.REVIEWs = new HashSet<REVIEW>();
         }
-    
+        [DataMember(Order = 1)]
         public int StrayID { get; set; }
+        [DataMember(Order = 2)]
         public string X { get; set; }
+        [DataMember(Order = 3)]
         public string Y { get; set; }
+        [DataMember(Order = 4)]
         public string Biography { get; set; }
+        [DataMember(Order = 5)]
         public string Title { get; set; }
+        [DataMember(Order = 6)]
         public string TimeSeen { get; set; }
+        [DataMember(Order = 7)]
         public string DateSeen { get; set; }
+        [DataMember(Order = 8)]
         public string Type { get; set; }
+        [DataMember(Order = 9)]
         public string Breed { get; set; }
+        [DataMember(Order = 10)]
         public Nullable<int> ImageID { get; set; }
+        [DataMember(Order = 11)]
         public Nullable<int> PinID { get; set; }
+        [DataMember(Order = 12)]
         public Nullable<int> ReviewID { get; set; }
+        [DataMember(Order = 13)]
         public int UserID { get; set; }
+        [DataMember(Order = 14)]
         public string Status { get; set; }
-    
+
+        [DataMember(Order = 15)]
         public virtual ICollection<REVIEW> REVIEWs { get; set; }
+        [DataMember(Order = 16)]
         public virtual USER USER { get; set; }
     }
+
 }
