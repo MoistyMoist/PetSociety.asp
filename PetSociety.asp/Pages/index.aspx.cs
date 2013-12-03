@@ -22,24 +22,63 @@ namespace PetSociety.asp.Pages
         void startPlotting(object source, EventArgs e)
         {
             GetLocations();
-            GetEvents();
-            GetStrays();
-            GetLost();
+           //GetEvents();
+            //GetPets();
+            GetUser();
         }
 
         protected void GetEvents()
         {
-            
+            List<EVENT> events;
+            using (PetSocietyDBEntities db = new PetSocietyDBEntities())
+            {
+                var query = from c in db.EVENTs.Include("PIN.IMAGE")
+                            select c;
+
+                events = query.ToList();
+            }
+            for (int i = 0; i < events.Count; i++)
+            {
+                var x = events.ElementAt(i).X;
+                var y = events.ElementAt(i).Y;
+                var imageURl = "dsa";
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x + "," + y + ");", true);
+                EventNO.Text = events.Count.ToString();
+            }
         }
         
-        protected void GetStrays()
+        protected void GetPets()
         {
-            
+            List<PET> pets;
+            using (PetSocietyDBEntities db = new PetSocietyDBEntities())
+            {
+                var query = from c in db.PETs.Include("PIN.IMAGE")
+                            select c;
+
+                pets = query.ToList();
+            }
+            PetNO.Text = pets.Count.ToString();
         }
 
-        protected void GetLost()
+        protected void GetUser()
         {
-            
+            List<USER> users;
+            using (PetSocietyDBEntities db = new PetSocietyDBEntities())
+            {
+                var query = from c in db.USERs.Include("PIN.IMAGE")
+                            select c;
+
+                users = query.ToList();
+            }
+            UserNO.Text = users.Count.ToString();
+            for (int i = 0; i < users.Count; i++)
+            {
+                var x = users.ElementAt(i).X;
+                var y = users.ElementAt(i).Y;
+                var imageURl = "dsa";
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x + "," + y + ");", true);
+
+            }
         }
 
         protected void GetLocations()

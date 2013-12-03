@@ -32,7 +32,7 @@ namespace PetSociety.asp
 
         [DataMember(Order = 1)]
         public int UserID { get; set; }
-        [DataMember(Order = 2]
+        [DataMember(Order = 2)]
         public string Name { get; set; }
         [DataMember(Order = 3)]
         public string Email { get; set; }
