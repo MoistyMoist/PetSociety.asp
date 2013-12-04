@@ -11,19 +11,14 @@ namespace PetSociety.asp
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
-    [DataContract(IsReference = true)]
+    
     public partial class FRIEND_LIST
     {
-        [DataMember(Order = 1)]
-        public int Firend_ListID { get; set; }
-        [DataMember(Order = 2)]
+        public int Friend_ListID { get; set; }
         public int UserID { get; set; }
-        [DataMember(Order = 3)]
         public int FriendID { get; set; }
-
-        [DataMember(Order = 4)]
+    
         public virtual USER USER { get; set; }
+        public virtual USER USER1 { get; set; }
     }
 }

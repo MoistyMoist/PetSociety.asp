@@ -82,9 +82,9 @@
     <Content Include="images\Icon1.png" />
     <Content Include="images\Icon2.png" />
     <Content Include="images\Icon3.png" />
-    <Content Include="Pages\analysis.aspx" />
-    <Content Include="Pages\index.aspx" />
-    <Content Include="Pages\login.aspx" />
+    <Content Include="analysis.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\BtJs\affix.js" />
@@ -110,6 +110,7 @@
     <Content Include="Scripts\BtJs\tooltip.js" />
     <Content Include="Scripts\BtJs\transition.js" />
     <Content Include="Scripts\BtJs\uglify.js" />
+    <Content Include="packages.config" />
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -127,7 +128,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\AndroidWebAPI - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\AndroidWebAPI - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\html5shiv.js" />
@@ -139,9 +141,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACHIEVEMENT.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="ADVERT.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -187,31 +186,28 @@
     <Compile Include="ORGANIZATION.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\analysis.aspx.cs">
+    <Compile Include="analysis.aspx.cs">
       <DependentUpon>analysis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\analysis.aspx.designer.cs">
+    <Compile Include="analysis.aspx.designer.cs">
       <DependentUpon>analysis.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\index.aspx.cs">
+    <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\index.aspx.designer.cs">
+    <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\login.aspx.cs">
+    <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\login.aspx.designer.cs">
+    <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="PET.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PIN.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

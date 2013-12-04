@@ -47,7 +47,7 @@
                 zoom: 10
             };
             var image = {
-                url: window.location.protocol + "http:"+"//"+".iconverticons.com"+"//"+"img"+"//"+"logo.png",
+                url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -62,7 +62,7 @@
             marker.setMap(map);
         }
 
-        function plot_locations(x,y) {
+        function plot_locations(x,y,imageURL) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
@@ -79,24 +79,24 @@
             }
         }
 
-        function plot_strays(x, y,imageURL) {
+        function plot_User(x, y,imageURL) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Gstray(x, y);
+                plot_Guser(x, y,imageURL);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Guser(x, y, imageURL); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Guser(x, y, imageURL); }, 7000);
                 }
             }
         }
         
-        function plot_Gstrays(INx, INy,imageURL) {
+        function plot_Guser(INx, INy,imageURL) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -231,7 +231,7 @@
     <div class="subscription">
         <div class="container">
             <button  onclick="plot_events()" >
-                <asp:Image runat="server" src="../images/icon2.png" />
+               <!-- <asp:Image runat="server" src="../images/icon2.png" />-->
             </button>
             add the navigation button here<br />
             <br />

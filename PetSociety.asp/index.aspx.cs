@@ -76,7 +76,7 @@ namespace PetSociety.asp.Pages
                 var x = users.ElementAt(i).X;
                 var y = users.ElementAt(i).Y;
                 var imageURl = "dsa";
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x + "," + y + ");", true);
+                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_user(" + x + "," + y + ");", true);
 
             }
         }
@@ -94,7 +94,7 @@ namespace PetSociety.asp.Pages
             for (int i = 0; i < locations.Count; i++)
             {
                 var x = locations.ElementAt(i).X;
-                var y=locations.ElementAt(i).Y;
+                var y= locations.ElementAt(i).Y;
                 var imageURl = "dsa";
                 ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+");", true);
                 LocationNO.Text = locations.Count.ToString();

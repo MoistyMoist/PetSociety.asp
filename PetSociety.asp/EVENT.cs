@@ -11,9 +11,7 @@ namespace PetSociety.asp
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
-    [DataContract(IsReference = true)]
+    
     public partial class EVENT
     {
         public EVENT()
@@ -21,40 +19,23 @@ namespace PetSociety.asp
             this.ATTENDEEs = new HashSet<ATTENDEE>();
             this.GALLERies = new HashSet<GALLERY>();
         }
-        [DataMember(Order = 1)]
+    
         public int EventID { get; set; }
-        [DataMember(Order = 2)]
         public string Name { get; set; }
-        [DataMember(Order = 3)]
         public string Description { get; set; }
-        [DataMember(Order = 4)]
-        public string Date { get; set; }
-        [DataMember(Order = 5)]
-        public string Time { get; set; }
-        [DataMember(Order = 6)]
+        public Nullable<System.DateTime> DateTime { get; set; }
         public string Duration { get; set; }
-        [DataMember(Order = 7)]
-        public string CreatedDate { get; set; }
-        [DataMember(Order = 8)]
-        public string X { get; set; }
-        [DataMember(Order = 9)]
-        public string Y { get; set; }
-        [DataMember(Order = 10)]
-        public string Status { get; set; }
-        [DataMember(Order = 11)]
-        public string Privacy { get; set; }
-        [DataMember(Order = 12)]
-        public Nullable<int> PinID { get; set; }
-        [DataMember(Order = 13)]
+        public Nullable<System.DateTime> DateTimeCreated { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public Nullable<int> Status { get; set; }
+        public Nullable<int> Privacy { get; set; }
+        public Nullable<int> GalleryID { get; set; }
         public int UserID { get; set; }
-
-        [DataMember(Order = 14)]
+    
         public virtual ICollection<ATTENDEE> ATTENDEEs { get; set; }
-        [DataMember(Order = 15)]
+        public virtual GALLERY GALLERY { get; set; }
         public virtual USER USER { get; set; }
-        [DataMember(Order = 16)]
-        public virtual PIN PIN { get; set; }
-        [DataMember(Order = 17)]
         public virtual ICollection<GALLERY> GALLERies { get; set; }
     }
 }

@@ -11,35 +11,30 @@ namespace PetSociety.asp
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
-    [DataContract(IsReference = true)]
+    
     public partial class GALLERY
     {
         public GALLERY()
         {
+            this.EVENTs = new HashSet<EVENT>();
             this.IMAGEs = new HashSet<IMAGE>();
+            this.LOCATIONs = new HashSet<LOCATION>();
+            this.PETs = new HashSet<PET>();
         }
-        [DataMember(Order = 1)]
+    
         public int GalleryID { get; set; }
-        [DataMember(Order = 2)]
-        public Nullable<int> UserID { get; set; }
-        [DataMember(Order = 3)]
+        public Nullable<int> userID { get; set; }
         public Nullable<int> PetID { get; set; }
-        [DataMember(Order = 4)]
         public Nullable<int> LocationID { get; set; }
-        [DataMember(Order = 5)]
         public Nullable<int> EventID { get; set; }
-
-        [DataMember(Order = 6)]
-        public virtual USER USER { get; set; }
-        [DataMember(Order = 7)]
-        public virtual PET PET { get; set; }
-        [DataMember(Order = 6)]
-        public virtual ICollection<IMAGE> IMAGEs { get; set; }
-        [DataMember(Order = 7)]
+    
+        public virtual ICollection<EVENT> EVENTs { get; set; }
         public virtual EVENT EVENT { get; set; }
-        [DataMember(Order = 8)]
         public virtual LOCATION LOCATION { get; set; }
+        public virtual PET PET { get; set; }
+        public virtual USER USER { get; set; }
+        public virtual ICollection<IMAGE> IMAGEs { get; set; }
+        public virtual ICollection<LOCATION> LOCATIONs { get; set; }
+        public virtual ICollection<PET> PETs { get; set; }
     }
 }

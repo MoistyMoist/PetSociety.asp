@@ -11,23 +11,15 @@ namespace PetSociety.asp
 {
     using System;
     using System.Collections.Generic;
-    using System.Runtime.Serialization;
-
-    [DataContract(IsReference = true)]
+    
     public partial class ATTENDEE
     {
-        [DataMember(Order = 1)]
         public int AttendeeID { get; set; }
-        [DataMember(Order = 2)]
-        public string Status { get; set; }
-        [DataMember(Order = 3)]
+        public int Status { get; set; }
         public int EventID { get; set; }
-        [DataMember(Order = 4)]
         public int UserID { get; set; }
-
-        [DataMember(Order = 5)]
+    
         public virtual EVENT EVENT { get; set; }
-        [DataMember(Order = 6)]
         public virtual USER USER { get; set; }
     }
 }
