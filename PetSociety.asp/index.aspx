@@ -56,13 +56,13 @@
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(x,y),
                 animation: google.maps.Animation.DROP,
-                map: map,
-                icon: image
+                map: map
+               // icon: image
             });
             marker.setMap(map);
         }
 
-        function plot_locations(x,y,imageURL) {
+        function plot_locations(x,y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
@@ -79,24 +79,24 @@
             }
         }
 
-        function plot_User(x, y,imageURL) {
+        function plot_user(x, y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Guser(x, y,imageURL);
+                plot_Guser(x, y);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Guser(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Guser(x, y); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Guser(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Guser(x, y); }, 7000);
                 }
             }
         }
         
-        function plot_Guser(INx, INy,imageURL) {
+        function plot_Guser(INx, INy) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -104,7 +104,7 @@
                 zoom: 10
             };
             var image = {
-                url: imageURL,
+              //  url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -113,30 +113,30 @@
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
-                map: map,
-                icon: image
+                map: map
+               // icon: image
             });
             marker.setMap(map);
         }
 
-        function plot_events(x, y,imageURL) {
+        function plot_events(x, y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Gstray(x, y);
+                plot_Gevent(x, y);
             } else {
-                alert("waitting");
+                alert("waiting for event");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Gevent(x, y); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Gevent(x, y); }, 7000);
                 }
             }
         }
 
-        function plot_Gevent(x, y,imageURL) {
+        function plot_Gevent(INx, INy) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -144,7 +144,7 @@
                 zoom: 10
             };
             var image = {
-                url: imageURL,
+                url: "http://aux.iconpedia.net/uploads/18701319771870700329.png",
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -153,30 +153,29 @@
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
-                map: map,
-                icon: image
+                map: map
             });
             marker.setMap(map);
         }
 
-        function plot_losts(x, y,imageURL) {
+        function plot_losts(x, y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
                 alert("plotting");
-                plot_Gstray(x, y);
+                plot_Glosts(x, y, imageURL);
             } else {
                 alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Glosts(x, y, imageURL); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Gstrays(x, y); }, 7000);
+                    setTimeout(function () { plot_Glosts(x, y, imageURL); }, 7000);
                 }
             }
         }
 
-        function plot_Glosts(x, y,imageURL) {
+        function plot_Glosts(INx, INy) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -193,8 +192,8 @@
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
-                map: map,
-                icon: image
+                map: map
+               // icon: image
             });
             marker.setMap(map);
         }
@@ -230,9 +229,7 @@
 
     <div class="subscription">
         <div class="container">
-            <button  onclick="plot_events()" >
-               <!-- <asp:Image runat="server" src="../images/icon2.png" />-->
-            </button>
+           
             add the navigation button here<br />
             <br />
         </div>

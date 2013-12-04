@@ -21,9 +21,10 @@ namespace PetSociety.asp.Pages
 
         void startPlotting(object source, EventArgs e)
         {
+            GetLost();
             GetLocations();
-           //GetEvents();
-            //GetPets();
+            GetEvents();
+            GetPets();
             GetUser();
         }
 
@@ -32,7 +33,7 @@ namespace PetSociety.asp.Pages
             List<EVENT> events;
             using (PetSocietyDBEntities db = new PetSocietyDBEntities())
             {
-                var query = from c in db.EVENTs.Include("PIN.IMAGE")
+                var query = from c in db.EVENTs
                             select c;
 
                 events = query.ToList();
@@ -41,8 +42,7 @@ namespace PetSociety.asp.Pages
             {
                 var x = events.ElementAt(i).X;
                 var y = events.ElementAt(i).Y;
-                var imageURl = "dsa";
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x + "," + y + ");", true);
+                ClientScript.RegisterStartupScript(GetType(), "fds" + i, "plot_events(" + x + "," + y + ");", true);
                 EventNO.Text = events.Count.ToString();
             }
         }
@@ -52,7 +52,7 @@ namespace PetSociety.asp.Pages
             List<PET> pets;
             using (PetSocietyDBEntities db = new PetSocietyDBEntities())
             {
-                var query = from c in db.PETs.Include("PIN.IMAGE")
+                var query = from c in db.PETs
                             select c;
 
                 pets = query.ToList();
@@ -65,7 +65,7 @@ namespace PetSociety.asp.Pages
             List<USER> users;
             using (PetSocietyDBEntities db = new PetSocietyDBEntities())
             {
-                var query = from c in db.USERs.Include("PIN.IMAGE")
+                var query = from c in db.USERs
                             select c;
 
                 users = query.ToList();
@@ -76,7 +76,7 @@ namespace PetSociety.asp.Pages
                 var x = users.ElementAt(i).X;
                 var y = users.ElementAt(i).Y;
                 var imageURl = "dsa";
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_user(" + x + "," + y + ");", true);
+             ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_user(" + x + "," + y + ");", true);
 
             }
         }
@@ -86,7 +86,7 @@ namespace PetSociety.asp.Pages
             List<LOCATION> locations;
             using(PetSocietyDBEntities db = new PetSocietyDBEntities())
             {
-                var query=from c in db.LOCATIONs.Include("PIN.IMAGE")
+                var query=from c in db.LOCATIONs
                               select c;
 
                  locations = query.ToList(); 
@@ -96,10 +96,27 @@ namespace PetSociety.asp.Pages
                 var x = locations.ElementAt(i).X;
                 var y= locations.ElementAt(i).Y;
                 var imageURl = "dsa";
-                ClientScript.RegisterStartupScript(GetType(), "hwad" + i, "plot_locations(" + x+ "," + y+");", true);
+               ClientScript.RegisterStartupScript(GetType(), "ggfdj" + i, "plot_locations(" + x+ "," + y+");", true);
                 LocationNO.Text = locations.Count.ToString();
             }
         }
         
+        protected void GetLost()
+        {
+            List<LOST> losts;
+            using (PetSocietyDBEntities db = new PetSocietyDBEntities())
+            {
+                var query = from c in db.LOSTs
+                            select c;
+
+                losts = query.ToList();
+            }
+            for (int i = 0; i < losts.Count; i++)
+            {
+                var x = losts.ElementAt(i).X;
+                var y = losts.ElementAt(i).Y;
+                ClientScript.RegisterStartupScript(GetType(), "lostt" + i, "plot_losts(" + x + "," + y + ");", true);
+            }
+        }
     }
 }
