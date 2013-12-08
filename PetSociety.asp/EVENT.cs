@@ -23,9 +23,9 @@ namespace PetSociety.asp
         public int EventID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Nullable<System.DateTime> DateTime { get; set; }
-        public string Duration { get; set; }
-        public Nullable<System.DateTime> DateTimeCreated { get; set; }
+        public System.DateTime StartDateTime { get; set; }
+        public System.DateTime EndDateTime { get; set; }
+        public System.DateTime DateTimeCreated { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
         public Nullable<int> Status { get; set; }

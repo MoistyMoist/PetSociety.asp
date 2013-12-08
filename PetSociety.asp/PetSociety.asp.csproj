@@ -128,8 +128,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <None Include="Properties\PublishProfiles\AndroidWebAPI - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\AndroidWebAPI - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\PetSociety.pubxml" />
+    <None Include="Properties\PublishProfiles\PetSocietySG %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\PetSocietySG.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\html5shiv.js" />
@@ -138,11 +139,19 @@
     <Content Include="Scripts\jquery.countdown.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADVERT.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="analysis.aspx.cs">
+      <DependentUpon>analysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="analysis.aspx.designer.cs">
+      <DependentUpon>analysis.aspx</DependentUpon>
     </Compile>
     <Compile Include="ATTENDEE.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -162,8 +171,22 @@
     <Compile Include="IMAGE.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LOCATION.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="LOST.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -186,27 +209,6 @@
     <Compile Include="ORGANIZATION.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="analysis.aspx.cs">
-      <DependentUpon>analysis.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="analysis.aspx.designer.cs">
-      <DependentUpon>analysis.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PET.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -216,6 +218,13 @@
     </Compile>
     <Compile Include="STRAY.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="USER.cs">
       <DependentUpon>Model.tt</DependentUpon>
