@@ -100,7 +100,6 @@
         <nav class="navbar navbar-inverse" style="height: 80px;" role="navigation">
         </nav>
 
-        </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-2 panel panel-primary">
                 <div class="panel-heading" style="margin-left: -15px; margin-right: -15px">
