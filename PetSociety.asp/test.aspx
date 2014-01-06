@@ -115,7 +115,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <asp:Label ID="lostNO" runat="server" />
+                        <center><p><asp:Label runat="server" ID="lostNo" Text="1209" /></p></center>
                     </p>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <asp:Label ID="strayID" runat="server" />
+                       <center><p><asp:Label runat="server" ID="strayNO" Text="1209" /></p></center>
                     </p>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <asp:Label ID="petID" runat="server" />
+                        <center><p><asp:Label runat="server" ID="petNO" Text="1209" /></p></center>
                     </p>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <asp:Label ID="eventID" runat="server" />
+                        <center><p><asp:Label runat="server" ID="eventNO" Text="1209" /></p></center>
                     </p>
                 </div>
             </div>

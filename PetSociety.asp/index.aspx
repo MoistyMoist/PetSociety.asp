@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PetSociety.asp.Pages.index" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,11 +36,11 @@
             map = new google.maps.Map(document.getElementById("map-canvas"),
                 mapOptions);
         }
-      google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- plotting the map -->
     <script type="text/javascript">
-        function plot_Glocations(INx, INy,imageURL) {
+        function plot_Glocations(INx, INy, imageURL) {
             x = INx;
             y = INy;
             var mapOptions = {
@@ -47,29 +48,29 @@
                 zoom: 10
             };
             var image = {
-                url: imageURL,
+                // url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25)
             };
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(x,y),
+                position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
                 map: map
-               // icon: image
+                // icon: image
             });
             marker.setMap(map);
         }
 
-        function plot_locations(x,y) {
+        function plot_locations(x, y) {
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
-                alert("plotting");
+                //alert("plotting");
                 plot_Glocations(x, y);
             } else {
-                alert("waitting");
+                //alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
                     setTimeout(function () { plot_Glocations(x, y); }, 7000);
@@ -83,10 +84,10 @@
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
-                alert("plotting");
+                //alert("plotting");
                 plot_Guser(x, y);
             } else {
-                alert("waitting");
+                // alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
                     setTimeout(function () { plot_Guser(x, y); }, 7000);
@@ -95,7 +96,7 @@
                 }
             }
         }
-        
+
         function plot_Guser(INx, INy) {
             x = INx;
             y = INy;
@@ -104,7 +105,7 @@
                 zoom: 10
             };
             var image = {
-              //  url: imageURL,
+                //  url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -114,7 +115,7 @@
                 position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
                 map: map
-               // icon: image
+                // icon: image
             });
             marker.setMap(map);
         }
@@ -123,10 +124,10 @@
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
-                alert("plotting");
+                //alert("plotting");
                 plot_Gevent(x, y);
             } else {
-                alert("waiting for event");
+                //alert("waiting for event");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
                     setTimeout(function () { plot_Gevent(x, y); }, 7000);
@@ -144,7 +145,7 @@
                 zoom: 10
             };
             var image = {
-                url: "http://aux.iconpedia.net/uploads/18701319771870700329.png",
+                // url: "http://aux.iconpedia.net/uploads/18701319771870700329.png",
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -162,15 +163,15 @@
             var body = document.getElementsByTagName('BODY')[0];
             // CONDITION DOES NOT WORK
             if (document.readyState === "complete") {
-                alert("plotting");
+                // alert("plotting");
                 plot_Glosts(x, y, imageURL);
             } else {
-                alert("waitting");
+                //alert("waitting");
                 // CODE BELOW WORKS
                 if (window.addEventListener) {
-                    setTimeout(function () { plot_Glosts(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Glosts(x, y); }, 7000);
                 } else {
-                    setTimeout(function () { plot_Glosts(x, y, imageURL); }, 7000);
+                    setTimeout(function () { plot_Glosts(x, y); }, 7000);
                 }
             }
         }
@@ -183,7 +184,7 @@
                 zoom: 10
             };
             var image = {
-                url: imageURL,
+                // url: imageURL,
                 size: new google.maps.Size(71, 71),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
@@ -193,17 +194,72 @@
                 position: new google.maps.LatLng(x, y),
                 animation: google.maps.Animation.DROP,
                 map: map
-               // icon: image
+                // icon: image
             });
             marker.setMap(map);
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Language', 'Speakers (in millions)'],
+              ['Dog', 6], ['Cat', 83], ['Fish', 10],
+              ['Rabbit', 2],
+            ]);
+
+            var options = {
+                title: 'Common Pets in SG',
+                legend: 'none',
+                pieSliceText: 'label',
+                slices: {
+                    4: { offset: 0.2 },
+                    //12: { offset: 0.3 },
+                    //14: { offset: 0.4 },
+                    //15: { offset: 0.5 },
+                },
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Accident', 'Date'],
+              ['2004', 1000],
+              ['2005', 1170],
+              ['2006', 660],
+              ['2007', 1030]
+            ]);
+
+            var options = {
+                title: 'Accident Rate'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
         }
     </script>
 </head>
 
 <body>
 
-   <form id="form1" runat="server">
-       <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
         <!--this form is needed to clal javascript form code behind -->
     </form>
     <div class="main">
@@ -214,11 +270,14 @@
                         <h1>PetSociety</h1>
                         <p>Society of lost pets</p>
                         <div class="countdown">
-                            <div id="countdown" class="hasCountdown"><span class="countdown_row countdown_show4"><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="PetNO"></asp:Label></span><br>
-                                Pets</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="EventNO"></asp:Label></span><br>
-                                    Events</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="UserNO"></asp:Label></span><br>
-                                        Users</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="LocationNO"></asp:Label></span><br>
-                                            Locations</span></span></div>
+                            <div id="countdown" class="hasCountdown">
+                                <span class="countdown_row countdown_show4"><span class="countdown_section"><span class="countdown_amount">
+                                    <asp:Label runat="server" Text="" ID="PetNO"></asp:Label></span><br>
+                                    Pets</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="EventNO"></asp:Label></span><br>
+                                        Events</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="UserNO"></asp:Label></span><br>
+                                            Users</span><span class="countdown_section"><span class="countdown_amount"><asp:Label runat="server" Text="" ID="LocationNO"></asp:Label></span><br>
+                                                Locations</span></span>
+                            </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -227,14 +286,36 @@
         </div>
     </div>
 
-    <div class="subscription">
+    <div class="subscription" style="height: 200px;">
         <div class="container">
-           
             add the navigation button here<br />
             <br />
         </div>
     </div>
-    <div id="map-canvas" style="width: 100%; height: 600px;"></div>
+
+
+    <div id="map-canvas" class="pull-left col-md-8" style="width: 100%; height: 400px;"></div>
+
+    <div class="main">
+        <div class="container">&bsp &bspButtons here</div>
+
+            <div class="col-md-5 panel panel-primary" style="height: auto; min-height: 300px; max-height: 500px;">
+                <div id="piechart" class="col-md-10 panel-body" style="height: auto; width: 100%; min-height: 300px; max-height: 500px;">
+                    <p>...</p>
+                </div>
+            </div>
+            <div class=" col-md-5 panel panel-primary" style="height: auto; min-height: 300px; max-height: 500px;">
+                <h4 class="text-success">
+                    <bold>Visulation</bold>
+                    <small class="pull-right">3mins ago</small></h4>
+                <div id="Div2" class="col-md-10 panel-body">
+                </div>
+            </div>
+        
+         <div id="chart_div" class="col-md-10 panel-body" style="height: auto; width: 100%; min-height: 300px; max-height: 500px; background-repeat: repeat; background-image: url(../images/2.png);">
+           
+        </div>
+    </div>
 
 
     <!-- other Scripts-->
@@ -244,6 +325,6 @@
     <script src="../Scripts/html5shiv.js"></script>
     <script src="../Scripts/jquery.countdown.min.js"></script>
     <script src="../Scripts/custom.js"></script>
-    
+
 </body>
 </html>

@@ -40,39 +40,39 @@ namespace PetSociety.asp {
         protected global::System.Web.UI.WebControls.Label locationNo;
         
         /// <summary>
-        /// lostNO control.
+        /// lostNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lostNO;
+        protected global::System.Web.UI.WebControls.Label lostNo;
         
         /// <summary>
-        /// strayID control.
+        /// strayNO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label strayID;
+        protected global::System.Web.UI.WebControls.Label strayNO;
         
         /// <summary>
-        /// petID control.
+        /// petNO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label petID;
+        protected global::System.Web.UI.WebControls.Label petNO;
         
         /// <summary>
-        /// eventID control.
+        /// eventNO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label eventID;
+        protected global::System.Web.UI.WebControls.Label eventNO;
     }
 }
