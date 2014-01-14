@@ -85,6 +85,7 @@
     <Content Include="analysis.aspx" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="lost.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\BtJs\affix.js" />
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lost.aspx.cs">
+      <DependentUpon>lost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lost.aspx.designer.cs">
+      <DependentUpon>lost.aspx</DependentUpon>
     </Compile>
     <Compile Include="LOST.cs">
       <DependentUpon>Model.tt</DependentUpon>

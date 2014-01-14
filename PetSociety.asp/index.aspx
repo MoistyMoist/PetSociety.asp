@@ -294,27 +294,18 @@
     </div>
 
 
-    <div id="map-canvas" class="pull-left col-md-8" style="width: 100%; height: 400px;"></div>
+    <div id="map-canvas" class="pull-left col-md-8" style="width: 100%; min-height: 400px;"></div>
 
     <div class="main">
-        <div class="container">&bsp &bspButtons here</div>
-
-            <div class="col-md-5 panel panel-primary" style="height: auto; min-height: 300px; max-height: 500px;">
-                <div id="piechart" class="col-md-10 panel-body" style="height: auto; width: 100%; min-height: 300px; max-height: 500px;">
-                    <p>...</p>
-                </div>
-            </div>
-            <div class=" col-md-5 panel panel-primary" style="height: auto; min-height: 300px; max-height: 500px;">
-                <h4 class="text-success">
-                    <bold>Visulation</bold>
-                    <small class="pull-right">3mins ago</small></h4>
-                <div id="Div2" class="col-md-10 panel-body">
-                </div>
-            </div>
-        
-         <div id="chart_div" class="col-md-10 panel-body" style="height: auto; width: 100%; min-height: 300px; max-height: 500px; background-repeat: repeat; background-image: url(../images/2.png);">
-           
+        <!--<div class="container">&bsp &bspButtons here</div>-->
+        <div id="chart_div" class="col-md-10 panel-body" style="min-height: 200px; width: 100%; min-height: 280px; max-height: 500px; background-repeat: repeat; background-image: url(../images/2.png);">
         </div>
+
+        <div id="piechart" class="col-md-5 panel-body" style="min-height: 200px; width: 100%; min-height: 280px; max-height: 500px; background-repeat: repeat; background-image: url(../images/2.png);">
+        </div>
+
+
+       
     </div>
 
 
