@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PetSociety.asp
 {
-    public partial class lost : System.Web.UI.Page
+    public partial class StrayChart : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

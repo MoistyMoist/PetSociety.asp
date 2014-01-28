@@ -11,7 +11,7 @@ namespace PetSociety.asp
 {
 
 
-    public partial class lost
+    public partial class StrayChart
     {
 
         /// <summary>

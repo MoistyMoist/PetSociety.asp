@@ -85,7 +85,7 @@
     <Content Include="analysis.aspx" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="lost.aspx" />
+    <Content Include="LostChart.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\BtJs\affix.js" />
@@ -140,6 +140,7 @@
     <Content Include="Scripts\jquery.countdown.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="StrayChart.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -189,15 +190,15 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="lost.aspx.cs">
-      <DependentUpon>lost.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="lost.aspx.designer.cs">
-      <DependentUpon>lost.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LOST.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LostChart.aspx.cs">
+      <DependentUpon>LostChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LostChart.aspx.designer.cs">
+      <DependentUpon>LostChart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="STRAY.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StrayChart.aspx.cs">
+      <DependentUpon>StrayChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StrayChart.aspx.designer.cs">
+      <DependentUpon>StrayChart.aspx</DependentUpon>
     </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
