@@ -21,12 +21,37 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn7PCDcQ6el2OzBjdIKHgFF2xfxdwNj3o&sensor=false">
     </script>
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript">
+         google.load("visualization", "1", { packages: ["corechart"] });
+         google.setOnLoadCallback(drawChart);
+         function drawChart() {
+             var data = google.visualization.arrayToDataTable([
+               ['Type', 'Number'],
+               ['Dog', 4],
+               ['Cat', 4],
+               ['Fish', 0],
+               ['Bird', 1],
+               ['Rabbit', 0],
+               ['Hamster', 0],
+               ['Tuttlr',0]
+             ]);
+
+             var options = {
+                 title: 'Types of Strays'
+             };
+
+             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+             chart.draw(data, options);
+         }
+    </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+    <div id="chart_div" class="col-md-10 panel-body" style="height: auto; width: 100%; min-height: 300px; max-height: 500px;min-width: 300px; max-width: 500px;">
+                        <p>...</p>
+                    </div>
     </form>
 </body>
 </html>

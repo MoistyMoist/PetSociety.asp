@@ -72,6 +72,7 @@
     <Content Include="CSS\jquery.countdown.css" />
     <Content Include="CSS\site.css" />
     <Content Include="CSS\style.css" />
+    <Content Include="EventChart.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\2.png" />
     <Content Include="images\carousel1.jpg" />
@@ -84,6 +85,7 @@
     <Content Include="images\Icon3.png" />
     <Content Include="analysis.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="LocationChart.aspx" />
     <Content Include="login.aspx" />
     <Content Include="LostChart.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -161,6 +163,13 @@
     <Compile Include="EVENT.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="EventChart.aspx.cs">
+      <DependentUpon>EventChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventChart.aspx.designer.cs">
+      <DependentUpon>EventChart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FRIEND_LIST.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -182,6 +191,13 @@
     </Compile>
     <Compile Include="LOCATION.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationChart.aspx.cs">
+      <DependentUpon>LocationChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocationChart.aspx.designer.cs">
+      <DependentUpon>LocationChart.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
