@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PetSociety.asp.Pages
+namespace PetSociety.asp
 {
 
 
-    public partial class analysis
+    public partial class StrayChart
     {
 
         /// <summary>

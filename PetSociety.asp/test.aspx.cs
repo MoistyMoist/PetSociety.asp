@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace PetSociety.asp.Pages
+namespace PetSociety.asp
 {
-    public partial class index : System.Web.UI.Page
+    public partial class test : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "tmp", "<script type='text/javascript'>disp_confirm();</script>", false);
+
         }
     }
 }
