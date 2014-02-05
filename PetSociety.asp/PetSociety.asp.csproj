@@ -78,6 +78,7 @@
     <Content Include="images\Icon3.png" />
     <Content Include="Pages\analysis.aspx" />
     <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\BtJs\affix.js" />
@@ -103,6 +104,8 @@
     <Content Include="Scripts\BtJs\tooltip.js" />
     <Content Include="Scripts\BtJs\transition.js" />
     <Content Include="Scripts\BtJs\uglify.js" />
+    <None Include="Properties\PublishProfiles\AndroidWebAPI - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\AndroidWebAPI - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\html5shiv.js" />
